@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="734.0" prefWidth="885.0" style="-fx-background-color: #351f16;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java_fx.controllers.EtudiantController">
+   <children>
+      <Pane layoutX="33.0" layoutY="15.0" prefHeight="320.0" prefWidth="834.0" style="-fx-background-color: #351f16; -fx-border-color: #f58612;">
+         <children>
+            <Text fill="WHITE" layoutX="22.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inscription ">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtnomcomplet" layoutX="16.0" layoutY="66.0" prefHeight="38.0" prefWidth="509.0" promptText="Nom_complet" style="-fx-border-color: #f58612; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txttuteur" layoutX="19.0" layoutY="126.0" prefHeight="16.0" prefWidth="235.0" promptText="tuteur" style="-fx-border-color: #f58612; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtclasse" layoutX="17.0" layoutY="268.0" prefHeight="38.0" prefWidth="250.0" promptText="choisir classe où inscrire" style="-fx-border-color: #f58612; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtdateinscription" layoutX="16.0" layoutY="214.0" prefHeight="38.0" prefWidth="509.0" promptText="date inscription" style="-fx-border-color: #f58612; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Button layoutX="373.0" layoutY="266.0" mnemonicParsing="false" onAction="#insertEtudiant" prefHeight="39.0" prefWidth="154.0" style="-fx-background-color: #f58612; -fx-border-color: white;" text="inscrire" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="33.0" layoutY="388.0" prefHeight="320.0" prefWidth="390.0" style="-fx-background-color: #351f16; -fx-border-color: #f58612;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lister Etudiant inscrit année">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <TableView fx:id="tbinsAn" layoutX="5.0" layoutY="60.0" prefHeight="244.0" prefWidth="380.0" stylesheets="@../styles/style.css">
+              <columns>
+                <TableColumn fx:id="tcidAn" prefWidth="67.20001220703125" text="id" />
+                <TableColumn fx:id="tcmatricule" prefWidth="75.20000457763672" text="matricule" />
+                  <TableColumn fx:id="tcnomAn" prefWidth="108.80001831054688" text="nomEtudiant" />
+                  <TableColumn fx:id="tctuteur" prefWidth="127.199951171875" text="tuteur" />
+              </columns>
+            </TableView>
+            <TextField fx:id="anText" layoutX="225.0" layoutY="14.0" prefHeight="38.0" prefWidth="90.0" promptText="An" style="-fx-border-color: #351f16; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Button layoutX="324.0" layoutY="12.0" mnemonicParsing="false" onAction="#test" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: #f58612; -fx-border-color: white;" text="Ok" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="481.0" layoutY="386.0" prefHeight="320.0" prefWidth="390.0" style="-fx-background-color: #351f16; -fx-border-color: #f58612;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="filtrer etudiant de la classe choisit">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <Button layoutX="252.0" layoutY="38.0" mnemonicParsing="false" onAction="#classeAn" prefHeight="39.0" prefWidth="129.0" style="-fx-background-color: #351f16; -fx-border-color: #f58612;" text="filtrer" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <TableView fx:id="tb1" layoutX="10.0" layoutY="93.0" prefHeight="219.0" prefWidth="374.0" stylesheets="@../styles/style.css">
+              <columns>
+                <TableColumn fx:id="t1" prefWidth="75.0" text="id" />
+                <TableColumn fx:id="t2" prefWidth="75.0" text="matricule" />
+                  <TableColumn fx:id="t3" prefWidth="75.0" text="tuteur" />
+                  <TableColumn fx:id="t4" prefWidth="75.0" text="nom" />
+              </columns>
+            </TableView>
+            <TextField fx:id="txtclasse1" layoutX="123.0" layoutY="40.0" prefHeight="38.0" prefWidth="108.0" promptText="id classe" style="-fx-border-color: #f58612; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="anText1" layoutX="10.0" layoutY="39.0" prefHeight="38.0" prefWidth="90.0" promptText="An" style="-fx-border-color: #351f16; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

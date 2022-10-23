@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="670.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java_fx.controllers.ClasseController">
+   <children>
+      <BorderPane prefHeight="598.0" prefWidth="670.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="98.0" prefWidth="670.0" style="-fx-background-color: white; -fx-border-color: #f58612;" stylesheets="@../styles/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="txtniveau" layoutX="23.0" layoutY="37.0" promptText="Niveau" style="-fx-border-color: #f58612; -fx-border-width: 0px 0px 2px 0px;">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtfiliere" layoutX="285.0" layoutY="37.0" promptText="filiere" style="-fx-border-color: #f58612; -fx-border-width: 0px 0px 2px 0px;">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="550.0" layoutY="38.0" mnemonicParsing="false" onAction="#buttonCreerClasse" style="-fx-background-color: #f58612; -fx-border-color: white;" text="Enregistrer" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #351f16;" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tblvClasse" layoutX="10.0" layoutY="16.0" prefHeight="475.0" prefWidth="651.0">
+                    <columns>
+                      <TableColumn fx:id="tblcid" prefWidth="268.800030708313" text="id" />
+                        <TableColumn fx:id="tblclibelle" prefWidth="380.7999267578125" text="libelle" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
